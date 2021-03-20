@@ -30,13 +30,16 @@ x <- c(sample(0:9, 100, replace = TRUE))
 m <- matrix (x , nrow = 10 , ncol = 10)
 m
 nm <-c()
+subset(m == 0)
 
 for (i in 1:10) {
   for (j in 1:10){
-    if (m[i][j] == 0) {
-      nm[i] <- 0
+    if (m[i,j] == 0) {
+      nm[i] <- m[i,j]
     } 
   }
 }
 nm
+
+t(m)
 
