@@ -8,7 +8,7 @@
 #   
 
 income <- c(10000, 32000, 28000, 150000, 65000, 1573)
-income_class = income
+income_class <- income
 
 income_class[income < mean(income)] = 0
 income_class[income > mean(income)] = 1
@@ -26,20 +26,17 @@ income_class
 # replace Ч разрешаютс€ ли повторени€;
 # prob Ч вектор весов распределени€, по умолчанию отсутствует (равномерное распределение.)
 
+# через apply —ƒ≈Ћј“№
+
 x <- c(sample(0:9, 100, replace = TRUE))
 m <- matrix (x , nrow = 10 , ncol = 10)
 m
 nm <-c()
 subset(m == 0)
 
-for (i in 1:10) {
-  for (j in 1:10){
-    if (m[i,j] == 0) {
-      nm[i] <- m[i,j]
-    } 
-  }
-}
-nm
-
+indexes = which(m == 0, arr.ind = TRUE)
+ind
 t(m)
+ind<-seq(0,nrow(indexes),2)
+newm <- indexes[ind, ]
 
