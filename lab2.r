@@ -1,10 +1,10 @@
 
 phones <- read.csv("~/R-BigData/phones.csv", encoding="UTF-8", sep=";")
-plot(data.frame(phones))
+#plot(data.frame(phones))
 
-phone_names <- names(phones)
-people_names <- phones[,"X.U.FEFF."]
-names(phones)
+#phone_names <- names(phones)
+#people_names <- phones[,"X.U.FEFF."]
+#names(phones)
 d<-data.frame()
 d
 
