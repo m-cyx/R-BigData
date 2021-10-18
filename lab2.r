@@ -18,13 +18,20 @@ print(mean)
 
 
 #Вывод в порядке убывания
-sort(round(apply(t1, 2, mean))) 
+sort(apply(t1, 2, mean))
 
 
 # количество людей, отдавших предпочтение >7 и <3 (составить вектор)
 m=function(t1){length(t1[t1>7 | t1<3])} 
-X=(apply(t1, 2, m))
+X=(apply(t1, 2, m)) # 2 indicates columns
 
 print(X)
+#barplot(sort(apply(t1, 2, mean))) 
+
 barplot(mean)
-barplot(X)
+hist(mean)
+barplot(mean)
+
+x1 <- mean[6.5 > X] && mean[7 < X]
+
+c <- row1[row1 > 21]
